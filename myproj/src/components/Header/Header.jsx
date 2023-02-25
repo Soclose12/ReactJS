@@ -8,6 +8,7 @@ const Header = () => {
    const handleMenuToggle = () => {
       setShowMenu(!showMenu);
    }
+
    const changeTitle = () => {
       setTitle("Relog");
    }
@@ -37,6 +38,7 @@ const Header = () => {
             </div>
          </header>
          <h3>{title}</h3>
+
       </div>
    )
 }
