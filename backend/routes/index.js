@@ -7,7 +7,7 @@ import {
    getProductById,
    updateProduct,
    deleteProduct
-} from "../controllerrs/Product,js";
+} from "../controllerrs/Product.js";
 
 const router = Express.router();
 

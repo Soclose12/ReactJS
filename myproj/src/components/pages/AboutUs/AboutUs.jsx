@@ -1,10 +1,12 @@
 import "./AboutUs.scss"
 
-const About = () => {
-   return (
-      <div>
-         <h1>About Us G2</h1>
-      </div>
-   )
+const AboutUs = () => {
+
+    return(
+        <div>
+            This is About Us page
+        </div>
+    )
 }
-export default AboutUs
+
+export default AboutUs;

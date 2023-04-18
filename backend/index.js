@@ -1,8 +1,12 @@
 import express from "express";
 import db from "./config/database.js";
-import productRoutes from "./routes/index.js";
+import productRoutes from "./routes/productRoutes.js";
+import usersRouter from "./routes/usersRouter.js";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 
+dotenv.config();
 const app = express();
 
 try {
@@ -12,8 +16,10 @@ try {
    console.error('Connection error:', error);
 }
 
-app.use(cors());
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use('/products', productRoutes);
+app.use('/users', usersRouter);
+app.use(cookieParser());
 
 app.listen(5000, () => console.log('Server running at port 5000'));
